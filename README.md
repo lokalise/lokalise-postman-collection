@@ -3,16 +3,15 @@ Collection of Lokalise API examples on top of Postman
 
 # Lokalise API Postman collection
 
-This Postman collection contains examples of requests and responses for most endpoints and commands of the
-Lokalise. For every command the smallest possible payload is given. Please find optional
-fields in the official API documentation.
+This Postman collection contains examples of requests and responses for endpoints of the
+Lokalise.
 
 ## Disclaimer
 
 This is not the official Lokalise API documentation. Please see [here](https://app.lokalise.com/api2docs)
 for a complete and approved documentation of the Lokalise.
 
-## How to use
+## How to use?
 
 **:warning: Be aware that postman automatically synchronizes environment variables (including your API client credentials) to your workspace if logged in.
 Use this collection only for development purposes and non-production projects.**
