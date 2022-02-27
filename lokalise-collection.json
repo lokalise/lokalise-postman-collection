@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "c37974e6-6f98-4abe-ad30-3c973c305729",
+		"name": "Lokalise Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Keys",
+			"item": [
+				{
+					"name": "All keys",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/projects/{{project_id}}:{{branch}}/keys",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects",
+								"{{project_id}}:{{branch}}",
+								"keys"
+							],
+							"query": [
+								{
+									"key": "include_translations",
+									"value": "",
+									"description": "Whether to disable key references. Possible values are 1 and 0. Default: 0",
+									"disabled": true
+								},
+								{
+									"key": "include_comments",
+									"value": "",
+									"description": "Whether to include comments. Possible values are 1 and 0. Default: 0",
+									"disabled": true
+								},
+								{
+									"key": "include_screenshots",
+									"value": "",
+									"description": "Whether to include URL to screenshots. Possible values are 1 and 0. Default: 0",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "",
+									"description": "Number of items to include (max 5000). Default: 100",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "",
+									"description": "Return results starting from this page. Default: 1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Languages",
+			"item": [
+				{
+					"name": "System languages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/projects/{{project_id}}:{{branch}}/languages",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects",
+								"{{project_id}}:{{branch}}",
+								"languages"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Files",
+			"item": [
+				{
+					"name": "Download files",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"format\":\"json\",\"original_filenames\":true}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/projects/{{project_id}}:{{branch}}/files/download",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects",
+								"{{project_id}}:{{branch}}",
+								"files",
+								"download"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "in",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{X-Api-Token}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "X-Api-Token",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

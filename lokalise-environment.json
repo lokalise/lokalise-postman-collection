@@ -1,0 +1,55 @@
+{
+	"id": "738b283c-0358-409b-b439-94d20205adff",
+	"name": "Lokalise.environment",
+	"values": [
+		{
+			"key": "X-Api-Token",
+			"value": "<your-lokalise-api-token>",
+			"type": "secret",
+			"enabled": true
+		},
+		{
+			"key": "host",
+			"value": "https://api.lokalise.com/api2",
+			"enabled": true
+		},
+		{
+			"key": "project_id",
+			"value": "<your-project-id>",
+			"enabled": true
+		},
+		{
+			"key": "branch",
+			"value": "<your-branch-name>",
+			"enabled": true
+		},
+		{
+			"key": "include_translations",
+			"value": "0",
+			"enabled": true
+		},
+		{
+			"key": "include_comments",
+			"value": "0",
+			"enabled": true
+		},
+		{
+			"key": "include_screenshots",
+			"value": "0",
+			"enabled": true
+		},
+		{
+			"key": "limit",
+			"value": "100",
+			"enabled": true
+		},
+		{
+			"key": "page",
+			"value": "1",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2022-02-27T22:22:08.431Z",
+	"_postman_exported_using": "Postman/9.14.9-220224-1140"
+}
