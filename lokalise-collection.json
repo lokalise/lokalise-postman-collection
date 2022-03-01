@@ -58,6 +58,58 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Retrieve a key",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/projects/{{project_id}}:{{branch}}/keys/{{key_id}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects",
+								"{{project_id}}:{{branch}}",
+								"keys",
+								"{{key_id}}"
+							],
+							"query": [
+								{
+									"key": "include_translations",
+									"value": "",
+									"description": "Whether to disable key references. Possible values are 1 and 0. Default: 0",
+									"disabled": true
+								},
+								{
+									"key": "include_comments",
+									"value": "",
+									"description": "Whether to include comments. Possible values are 1 and 0. Default: 0",
+									"disabled": true
+								},
+								{
+									"key": "include_screenshots",
+									"value": "",
+									"description": "Whether to include URL to screenshots. Possible values are 1 and 0. Default: 0",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "",
+									"description": "Number of items to include (max 5000). Default: 100",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "",
+									"description": "Return results starting from this page. Default: 1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -112,6 +164,66 @@
 								"{{project_id}}:{{branch}}",
 								"files",
 								"download"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "All projects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/projects",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects"
+							],
+							"query": [
+								{
+									"key": "filter_team_id",
+									"value": "",
+									"description": "Limit results to team ID.",
+									"disabled": true
+								},
+								{
+									"key": "filter_names",
+									"value": "",
+									"description": "One or more project names to filter by (comma separated).",
+									"disabled": true
+								},
+								{
+									"key": "include_statistics",
+									"value": "",
+									"description": "Whether to include project statistics. Possible values are 1 and 0. Default: 1",
+									"disabled": true
+								},
+								{
+									"key": "include_settings",
+									"value": null,
+									"description": "Whether to include project settings. Possible values are 1 and 0. Default: 1",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": null,
+									"description": "Number of items to include (max 5000). Default: 100",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": null,
+									"description": "Return results starting from this page. Default: 1",
+									"disabled": true
+								}
 							]
 						}
 					},
