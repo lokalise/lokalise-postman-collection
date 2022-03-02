@@ -110,6 +110,66 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Create keys",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"keys\": [\n        {\n            \"key_name\": \"index.welcome\",\n            \"description\": \"Index app welcome\",\n            \"platforms\": [\n                \"web\"\n            ],\n            \"translations\": [\n                {\n                    \"language_iso\": \"en\",\n                    \"translation\": \"Welcome\"\n                }\n            ]\n        },\n        {\n            \"key_name\": \"index.apple\",\n            \"description\": \"Welcome apple\",\n            \"platforms\": [\n                \"web\"\n            ],\n            \"is_plural\": true,\n            \"translations\": [\n                {\n                    \"language_iso\": \"en\",\n                    \"translation\": {\n                        \"one\": \"I have one apple\",\n                        \"other\": \"I have a lot of apples\"\n                    }\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/projects/{{project_id}}:{{branch}}/keys",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects",
+								"{{project_id}}:{{branch}}",
+								"keys"
+							],
+							"query": [
+								{
+									"key": "include_translations",
+									"value": "",
+									"description": "Whether to disable key references. Possible values are 1 and 0. Default: 0",
+									"disabled": true
+								},
+								{
+									"key": "include_comments",
+									"value": "",
+									"description": "Whether to include comments. Possible values are 1 and 0. Default: 0",
+									"disabled": true
+								},
+								{
+									"key": "include_screenshots",
+									"value": "",
+									"description": "Whether to include URL to screenshots. Possible values are 1 and 0. Default: 0",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "",
+									"description": "Number of items to include (max 5000). Default: 100",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "",
+									"description": "Return results starting from this page. Default: 1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
