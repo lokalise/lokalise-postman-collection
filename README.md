@@ -1,6 +1,8 @@
 # lokalise-postman-collection
 Collection of Lokalise API examples on top of Postman
 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/universal-satellite-458547/workspace/anil-lokalise-test-space/collection/19786472-fbfd90ad-286d-4afa-ae2a-a88a57eb5edb?ctx=documentation)
+
 # Lokalise API Postman collection
 
 This Postman collection contains examples of requests and responses for endpoints of the
